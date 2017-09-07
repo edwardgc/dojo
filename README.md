@@ -2,9 +2,9 @@
 
 **Tools directory**:
 
-* d:\tools\mingw64
+* c:\tools\mingw64
 
-* d:\tools\boost
+* c:\tools\boost
 
-* d:\tools\googletest
+* c:\tools\googletest
 
