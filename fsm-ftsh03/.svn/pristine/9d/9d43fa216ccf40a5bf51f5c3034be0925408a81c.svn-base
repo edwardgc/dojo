@@ -1,0 +1,37 @@
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <regex>
+
+using namespace std;
+
+string soundex(string& str)
+{
+    string first = str.substr(0, 1);
+    const vector<pair<string, string>> v = {
+            {"[hw]",""},
+            {"[bfpv]", "1"},
+            {"[cgjkqsxz]", "2"},
+            {"[dt]", "3"},
+            {"l", "4"},
+            {"[mn]", "5"},
+            {"r", "6"},
+            {"(.)\\1+", "$1"},
+            {"^.", ""},
+            {"[aeiouy]", ""},
+            {"$", "000"},
+            {"^(.{3}).*$", first + "$1"}
+    };
+    for_each(v.begin(), v.end(), [&str](const auto& sc) { regex p(sc.first, regex::icase); str = regex_replace(str, p, sc.second);});
+
+    return str;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+#include<iostream>
+#include <cstring>
+
+#include "func.h"
+
+using namespace std;
+
+A::A()
+{
+	cout << "default" << endl;
+}
+
+A::A(const char * p_data)
+{
+	cout << "user construtor" << endl;
+	data = new char[strlen(p_data) + 1];
+	strcpy(data, p_data);
+	//cout << data << endl;
+}
+A::A(A&& other)
+{
+	cout << "move consturtor" << endl;
+	this->data = other.data; //this->b, other->&&a
+	other.data = nullptr;
+}
+
+A::A(const A& other)
+{
+	cout << "copy construtor" << endl;
+	this->data = new char[strlen(other.data) + 1];
+	strcpy(this->data, other.data);
+}
+
+void A::display()
+
+{
+	if (data != nullptr)
+		cout << data << endl;
+}
+
+A& A::operator=(const A& other)
+{
+	cout << "copy assignment" << endl;
+	this->data = new char[strlen(other.data) + 1];
+	strcpy(this->data, other.data);
+	return *this;
+}
+
+A&& A::operator=(int&& other)
+{
+	cout << "move assignment" << endl;
+	return move(*this);
+}
+
+A::~A()
+{
+	delete[] data;
+	data = nullptr;
+}

@@ -1,0 +1,16 @@
+class A
+{
+public:
+	A();
+	A(A&&);
+	A(const char *);
+	A(const A&);
+    A& operator=(const A&);
+    A&& operator=(int&&);
+	void display();
+
+	~A();
+
+private:
+	char * data;
+};

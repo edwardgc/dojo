@@ -1,0 +1,18 @@
+/*
+ * Soundex.h
+ *
+ *  Created on: 2016年12月14日
+ *      Author: cguo005
+ */
+
+#ifndef SOUNDEX_SOUNDEX_H_
+#define SOUNDEX_SOUNDEX_H_
+
+#include <string>
+
+using namespace std;
+
+string soundex(string& str);
+
+
+#endif /* SOUNDEX_SOUNDEX_H_ */
