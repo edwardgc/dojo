@@ -92,6 +92,7 @@
 								<option id="gnu.cpp.link.option.userobjs.924611341" name="Other objects" superClass="gnu.cpp.link.option.userobjs" useByScannerDiscovery="false" valueType="userObjs">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lcd-ftsh08/Debug/Source/Digit.o}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lcd-ftsh08/Debug/Source/LCD.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/nwatch-ftsh0307/Debug/Source/GuiObserver.o}&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.128820813" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;C:\tools\wxWidgets\lib\gcc_lib&quot;"/>
