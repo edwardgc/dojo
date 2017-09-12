@@ -28,7 +28,7 @@ void WatchObserver::onDownClick()
 std::string WatchObserver::onSecond()
 {
 	cout << "one second timeout" << endl;
-	return "test";
+	return "";
 }
 
 

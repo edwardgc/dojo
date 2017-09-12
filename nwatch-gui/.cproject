@@ -39,6 +39,7 @@
 									<listOptionValue builtIn="false" value="&quot;C:\tools\wxWidgets\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\tools\wxWidgets\lib\gcc_lib\mswud&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lcd-ftsh08/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/nwatch-ftsh0307/Include}&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.flags.928103610" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" useByScannerDiscovery="true" value="-std=gnu++1y" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.1407351606" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -96,7 +97,7 @@
 									<listOptionValue builtIn="false" value="&quot;C:\tools\wxWidgets\lib\gcc_lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lcd-ftsh08/Debug/Source}&quot;"/>
 								</option>
-								<option id="gnu.cpp.link.option.other.2015191567" name="Other options (-Xlinker [option])" superClass="gnu.cpp.link.option.other" useByScannerDiscovery="false" valueType="stringList"/>
+								<option id="gnu.cpp.link.option.other.2015191567" name="Other options (-Xlinker [option])" superClass="gnu.cpp.link.option.other" useByScannerDiscovery="false"/>
 								<option id="gnu.cpp.link.option.soname.1463481976" name="Shared object name (-Wl,-soname=)" superClass="gnu.cpp.link.option.soname" useByScannerDiscovery="false" value="" valueType="string"/>
 								<option id="gnu.cpp.link.option.flags.341874291" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="-mwindows" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.900748918" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
