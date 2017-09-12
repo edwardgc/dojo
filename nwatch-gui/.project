@@ -3,7 +3,6 @@
 	<name>nwatch-gui</name>
 	<comment></comment>
 	<projects>
-		<project>lcd-ftsh08</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
