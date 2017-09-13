@@ -8,3 +8,5 @@
 
 * c:\tools\googletest
 
+* C:\tools\wxWidgets
+
