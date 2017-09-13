@@ -37,7 +37,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:/tools/boost&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lcd-ftsh08/Include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/fsm-ftsh03/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/nwatch-gui/Include}&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.flags.928103610" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" useByScannerDiscovery="true" value="-std=gnu++1y" valueType="string"/>
@@ -59,8 +58,6 @@
 								</option>
 								<option id="gnu.cpp.link.option.userobjs.924611341" name="Other objects" superClass="gnu.cpp.link.option.userobjs" useByScannerDiscovery="false" valueType="userObjs">
 									<listOptionValue builtIn="false" value="&quot;C:\tools\googletest\googlemock\make\gmock_main.a&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/fsm-ftsh03/Debug/src/Fsm.o}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/fsm-ftsh03/Debug/src/State.o}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lcd-ftsh08/Debug/Source/Digit.o}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lcd-ftsh08/Debug/Source/LCD.o}&quot;"/>
 								</option>
