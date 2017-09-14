@@ -11,6 +11,7 @@
 #include "Main.hpp"
 #include "WatchObserver.hpp"
 #include "GuiObserver.hpp"
+#include "ITime.hpp"
 
 using namespace std;
 
@@ -22,7 +23,8 @@ bool MyApp::OnInit() {
 	shared_ptr<WatchObserver> observer = make_shared<WatchObserver>();
 	main->subscribe(observer);
 
-	shared_ptr<GuiObserver> guiObserver = make_shared<GuiObserver>();
+	shared_ptr<WatchTime> time = make_shared<WatchTime>();
+	shared_ptr<GuiObserver> guiObserver = make_shared<GuiObserver>(time);
 	main->subscribe(guiObserver);
 
 	main->Show(true);
