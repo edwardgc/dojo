@@ -6,11 +6,21 @@
  */
 
 #pragma once
+#include <string>
+#include <map>
+#include"LcdChar.hpp"
 
-class Main
+
+class DigitalToMatrix
 {
 public:
-    int getInt();
+    DigitalToMatrix (){}
+    std::string printMatrixOfInputDigital(unsigned int p_digital);
+    int printNumberFromMatrix(std::string);
+private:
+    vector<LcdChar> convertToStr(unsigned int p_digital);
+    std::string m_str;
+
 };
 
 
