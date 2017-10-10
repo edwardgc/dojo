@@ -27,9 +27,9 @@ public:
         encode_header();
     }
 
-    const char* data() const
+    std::string toString() const
     {
-        return data_;
+        return data_ + header_length;
     }
 
     char* data()
