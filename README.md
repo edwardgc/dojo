@@ -3,7 +3,7 @@
 **Tools directory**:
 
 * c:\tools\mingw64
-    * not must here, just keep bin directory in PATH environment.
+    * It's not must here, just keep bin directory in PATH environment.
 * c:\tools\boost
     * bootstrap gcc
     * .\b2 --build-type=minimal toolset=gcc
