@@ -12,5 +12,6 @@
     * mingw32-make
 * C:\tools\wxWidgets
     * cd C:\tools\wxWidgets\build\msw
-    * mingw32-make SHELL=CMD.exe CXXFLAGS="-std=gnu++1y" -f makefile.gcc BUILD=debug UNICODE=1 SHARED=0
-
+    * mingw32-make CXXFLAGS="-std=gnu++1y" -f makefile.gcc MONOLITHIC=1 BUILD=debug UNICODE=1 SHARED=0
+    
+    
