@@ -37,9 +37,13 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:/tools/boost&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/chat-server/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\tools\wxWidgets\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\tools\wxWidgets\lib\gcc_lib\mswud&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.flags.928103610" name="Other dialect flags" superClass="gnu.cpp.compiler.option.dialect.flags" useByScannerDiscovery="true" value="-std=gnu++1y" valueType="string"/>
-								<option id="gnu.cpp.compiler.option.preprocessor.def.335653211" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.335653211" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="WIN32_LEAN_AND_MEAN"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1839339232" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.73355391" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug">
@@ -57,12 +61,41 @@
 									<listOptionValue builtIn="false" value="pthread"/>
 									<listOptionValue builtIn="false" value="wsock32"/>
 									<listOptionValue builtIn="false" value="ws2_32"/>
+									<listOptionValue builtIn="false" value="wxmsw31ud"/>
+									<listOptionValue builtIn="false" value="wxscintillad"/>
+									<listOptionValue builtIn="false" value="wxtiffd"/>
+									<listOptionValue builtIn="false" value="wxjpegd"/>
+									<listOptionValue builtIn="false" value="wxpngd"/>
+									<listOptionValue builtIn="false" value="wxzlibd"/>
+									<listOptionValue builtIn="false" value="wxregexud"/>
+									<listOptionValue builtIn="false" value="wxexpatd"/>
+									<listOptionValue builtIn="false" value="kernel32"/>
+									<listOptionValue builtIn="false" value="user32"/>
+									<listOptionValue builtIn="false" value="gdi32"/>
+									<listOptionValue builtIn="false" value="comdlg32"/>
+									<listOptionValue builtIn="false" value="winspool"/>
+									<listOptionValue builtIn="false" value="winmm"/>
+									<listOptionValue builtIn="false" value="shell32"/>
+									<listOptionValue builtIn="false" value="shlwapi"/>
+									<listOptionValue builtIn="false" value="comctl32"/>
+									<listOptionValue builtIn="false" value="ole32"/>
+									<listOptionValue builtIn="false" value="oleaut32"/>
+									<listOptionValue builtIn="false" value="uuid"/>
+									<listOptionValue builtIn="false" value="rpcrt4"/>
+									<listOptionValue builtIn="false" value="advapi32"/>
+									<listOptionValue builtIn="false" value="version"/>
+									<listOptionValue builtIn="false" value="wsock32"/>
+									<listOptionValue builtIn="false" value="wininet"/>
 								</option>
 								<option id="gnu.cpp.link.option.userobjs.924611341" name="Other objects" superClass="gnu.cpp.link.option.userobjs" useByScannerDiscovery="false" valueType="userObjs">
 									<listOptionValue builtIn="false" value="&quot;C:\tools\googletest\googlemock\make\gmock_main.a&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\tools\boost\bin.v2\libs\system\build\gcc-mingw-7.1.0\release\link-static\threading-multi\libboost_system-mgw71-mt-1_65.a&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\tools\boost\bin.v2\libs\thread\build\gcc-mingw-7.1.0\debug\link-static\threading-multi\libboost_thread-mgw71-mt-d-1_65.a&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\tools\boost\bin.v2\libs\system\build\gcc-mingw-7.1.0\release\link-static\threading-multi\libboost_system-*.a&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\tools\boost\bin.v2\libs\thread\build\gcc-mingw-7.1.0\debug\link-static\threading-multi\libboost_thread-*.a&quot;"/>
 								</option>
+								<option id="gnu.cpp.link.option.paths.1677746583" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;C:\tools\wxWidgets\lib\gcc_lib&quot;"/>
+								</option>
+								<option id="gnu.cpp.link.option.flags.2001446990" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="-mwindows" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.900748918" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>

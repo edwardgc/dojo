@@ -12,15 +12,19 @@
 #include <ChatMessage.hpp>
 #include <thread>
 #include <functional>
+#include <memory>
+
+class IReceiver;
 
 using chat_message_queue = std::deque<ChatMessage>;
 
 class ChatClient
 {
 public:
-    ChatClient(boost::asio::io_service& io_service, boost::asio::ip::tcp::resolver::iterator endpoint_iterator);
+    ChatClient(boost::asio::io_service& p_ioService, boost::asio::ip::tcp::resolver::iterator p_endpointIterator);
     void write(const ChatMessage& msg);
     void close();
+    void setReceiver(IReceiver* p_receiver);
 private:
     void handle_connect(const boost::system::error_code& error,
             boost::asio::ip::tcp::resolver::iterator endpoint_iterator);
@@ -30,9 +34,10 @@ private:
     void handle_write(const boost::system::error_code& error);
     void do_close();
 
-    boost::asio::io_service& io_service_;
-    boost::asio::ip::tcp::socket socket_;
-    ChatMessage read_msg_;
-    chat_message_queue write_msgs_;
+    boost::asio::io_service& m_ioService;
+    boost::asio::ip::tcp::socket m_socket;
+    ChatMessage m_readMsg;
+    chat_message_queue m_writeMsgs;
+    IReceiver* m_receiver = nullptr;
 };
 

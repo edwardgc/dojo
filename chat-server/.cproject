@@ -58,8 +58,8 @@
 								</option>
 								<option id="gnu.cpp.link.option.userobjs.924611341" name="Other objects" superClass="gnu.cpp.link.option.userobjs" useByScannerDiscovery="false" valueType="userObjs">
 									<listOptionValue builtIn="false" value="&quot;C:\tools\googletest\googlemock\make\gmock_main.a&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\tools\boost\bin.v2\libs\system\build\gcc-mingw-7.1.0\release\link-static\threading-multi\libboost_system-mgw71-mt-1_65.a&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\tools\boost\bin.v2\libs\thread\build\gcc-mingw-7.1.0\debug\link-static\threading-multi\libboost_thread-mgw71-mt-d-1_65.a&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\tools\boost\bin.v2\libs\system\build\gcc-mingw-7.1.0\release\link-static\threading-multi\libboost_system*&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\tools\boost\bin.v2\libs\thread\build\gcc-mingw-7.1.0\debug\link-static\threading-multi\libboost_thread-*&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.900748918" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
