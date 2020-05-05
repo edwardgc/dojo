@@ -15,6 +15,18 @@
             "environment": [],
             "externalConsole": false,
             "preLaunchTask": "cl.exe build active file"
+        },
+        {
+            "name": "gtest",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\bin\\gtest.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "cl.exe build active file"
         }
     ]
 }
