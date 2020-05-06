@@ -76,5 +76,6 @@
         "typeinfo": "cpp",
         "string.h": "c",
         "string": "cpp"
-    } // 效果效果比cpptools要好
+    },
+    "cmake.configureOnOpen": true // 效果效果比cpptools要好
 }
