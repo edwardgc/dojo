@@ -5,16 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "cl.exe - 生成和调试活动文件",
+            "name": "vs-project",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\build\\vs-project.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
-            "preLaunchTask": "cl.exe build active file"
+            "preLaunchTask": "cmake build"
         },
         {
             "name": "gtest",

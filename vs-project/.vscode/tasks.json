@@ -29,23 +29,9 @@
         },
         {
             "type": "shell",
-            "label": "gtest",
-            "command": "cl.exe",
+            "label": "cmake build",
+            "command": "cmake .",
             "args": [
-                "/Zi",
-                "/EHsc",
-                "-I${workspaceFolder}/../../googletest/googlemock/include",
-                "-I${workspaceFolder}/../../googletest/googletest/include",
-                "/Fd:",
-                "${fileDirname}\\bin\\Test_modules\\",
-                "/Fo:",
-                "${fileDirname}\\bin\\Test_modules\\",
-                "/Fp:",
-                "${fileDirname}\\bin\\Test_modules\\",
-                "/Fe:",
-                "${fileDirname}\\bin\\gtest.exe",
-                "${workspaceFolder}\\..\\..\\googletest\\build\\lib\\Release\\**.lib",
-                "${workspaceFolder}\\Test_modules\\*.cpp"
             ],
             "problemMatcher": [
                 "$msCompile"
