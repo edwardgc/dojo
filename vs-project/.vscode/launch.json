@@ -5,28 +5,26 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "vs-project",
+            "name": "(lldb) Launch",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${fileDirname}\\build\\vs-project.exe",
+            "program": "${workspaceFolder}/build/vs",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
-            "preLaunchTask": "cmake build"
+            "externalConsole": false
         },
         {
-            "name": "gtest",
+            "name": "Debug",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${fileDirname}\\bin\\gtest.exe",
+            "program": "${workspaceFolder}/build/vs-test",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
-            "preLaunchTask": "cl.exe build active file"
+            "externalConsole": false
         }
     ]
 }
