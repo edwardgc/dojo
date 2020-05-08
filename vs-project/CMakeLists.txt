@@ -4,7 +4,9 @@ cmake_minimum_required(VERSION 3.0)
 project(vs)
 
 # 使用c++11标准编译
-set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ ${CMAKE_CXX_FLAGS}")
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ ${CMAKE_CXX_FLAGS}")
+endif()
 
 # 在配置阶段下载和解压googletest
 configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
@@ -34,16 +36,16 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
-set(LIB_SRC
-  src/example.cpp
-)
 
-include_directories(src)
+aux_source_directory(src LIB_SRC)
+list(REMOVE_ITEM LIB_SRC "src/Main.cpp")
+
+include_directories(include src)
 add_library(${PROJECT_NAME}_lib ${LIB_SRC})
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME} src/Main.cpp)
 target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_lib)
 
 # 添加测试程序
-set(TEST_SOURCE test/test.cpp)
+set(TEST_SOURCE test/Test.cpp)
 add_executable(${PROJECT_NAME}-test ${LIB_SRC} ${TEST_SOURCE})
 target_link_libraries(${PROJECT_NAME}-test gtest_main)

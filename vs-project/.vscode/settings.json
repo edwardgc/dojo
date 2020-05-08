@@ -75,7 +75,8 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "string.h": "c",
-        "string": "cpp"
+        "string": "cpp",
+        "vector": "cpp"
     },
     "cmake.configureOnOpen": true,
     "gtest-adapter.supportLocation": true // 效果效果比cpptools要好
