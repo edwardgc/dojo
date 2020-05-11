@@ -7,10 +7,21 @@ project(vsw)
 
 # 使用c++11标准编译
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-    set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ ${CMAKE_CXX_FLAGS}")
-    add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
-    add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+  set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ ${CMAKE_CXX_FLAGS}")
 endif()
+
+#MFC
+FIND_PACKAGE(MFC REQUIRED)
+if(${MFC_FOUND})
+  ADD_DEFINITIONS(-D_AFXDLL)
+  SET(CMAKE_MFC_FLAG 2)
+  SET(MAIN_APP "src/MainApp.cpp")
+else()
+  SET(MAIN_APP "src/Main.cpp")
+endif()
+
+# 编码
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 
 # 在配置阶段下载和解压googletest
 configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
@@ -42,11 +53,11 @@ endif()
 
 
 aux_source_directory(src LIB_SRC)
-list(REMOVE_ITEM LIB_SRC "src/Main.cpp")
+list(REMOVE_ITEM LIB_SRC "src/Main.cpp" "src/MainApp.cpp")
 
 include_directories(include src)
 add_library(${PROJECT_NAME}_lib ${LIB_SRC})
-add_executable(${PROJECT_NAME} WIN32 src/Main.cpp)
+add_executable(${PROJECT_NAME} WIN32 ${MAIN_APP})
 target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_lib)
 
 # 添加测试程序
