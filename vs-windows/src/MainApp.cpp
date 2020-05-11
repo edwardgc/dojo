@@ -1,6 +1,4 @@
-﻿#include <MainApp.hpp>
-
-#define _AFXDLL
+#include <MainApp.hpp>
 
 MyApp app;
 
@@ -75,7 +73,7 @@ void MyFrame::OnPaint()
 
     CPaintDC dc(this);
 
-    // dc.TextOutW(100, 100, TEXT("为了部落"));
+    dc.TextOut(100, 100, TEXT("为了部落"));
 
     dc.Ellipse(10, 10, 100, 100);
 }

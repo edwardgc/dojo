@@ -17,7 +17,8 @@ if(${MFC_FOUND})
     SET(CMAKE_MFC_FLAG 2)
     SET(MAIN_APP "src/MainApp.cpp")
 else()
-  SET(MAIN_APP "src/Main.cpp")
+    MESSAGE(STATUS "MFC Not Found!")
+    SET(MAIN_APP "src/Main.cpp")
 endif()
 
 # 编码
