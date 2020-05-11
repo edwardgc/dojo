@@ -78,6 +78,6 @@
         "string": "cpp",
         "vector": "cpp"
     },
-    "cmake.configureOnOpen": true,
+    "cmake.configureOnOpen": false,
     "gtest-adapter.supportLocation": true // 效果效果比cpptools要好
 }
