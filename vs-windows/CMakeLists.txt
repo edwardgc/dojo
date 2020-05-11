@@ -7,15 +7,15 @@ project(vsw)
 
 # 使用c++11标准编译
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-  set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ ${CMAKE_CXX_FLAGS}")
+    set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ ${CMAKE_CXX_FLAGS}")
 endif()
 
 #MFC
 FIND_PACKAGE(MFC REQUIRED)
 if(${MFC_FOUND})
-  ADD_DEFINITIONS(-D_AFXDLL)
-  SET(CMAKE_MFC_FLAG 2)
-  SET(MAIN_APP "src/MainApp.cpp")
+    ADD_DEFINITIONS(-D_AFXDLL)
+    SET(CMAKE_MFC_FLAG 2)
+    SET(MAIN_APP "src/MainApp.cpp")
 else()
   SET(MAIN_APP "src/Main.cpp")
 endif()
@@ -26,16 +26,16 @@ add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 # 在配置阶段下载和解压googletest
 configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
 execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
-  RESULT_VARIABLE result
-  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
+    RESULT_VARIABLE result
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
 if(result)
-  message(FATAL_ERROR "CMake step for googletest failed: ${result}")
+    message(FATAL_ERROR "CMake step for googletest failed: ${result}")
 endif()
 execute_process(COMMAND ${CMAKE_COMMAND} --build .
-  RESULT_VARIABLE result
-  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
+    RESULT_VARIABLE result
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
 if(result)
-  message(FATAL_ERROR "Build step for googletest failed: ${result}")
+    message(FATAL_ERROR "Build step for googletest failed: ${result}")
 endif()
 
 # windwos下避免覆盖编译器配置
@@ -48,7 +48,7 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 
 # 兼容CMake2.8.11以前的版本
 if (CMAKE_VERSION VERSION_LESS 2.8.11)
-  include_directories("${gtest_SOURCE_DIR}/include")
+    include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
 
