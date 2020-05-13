@@ -73,7 +73,7 @@ void MyFrame::OnPaint()
 
     CPaintDC dc(this);
 
-    dc.TextOut(100, 100, TEXT("为了部落"));
+    dc.TextOut(100, 100, TEXT("Hello World"));
 
     dc.Ellipse(10, 10, 100, 100);
 }
