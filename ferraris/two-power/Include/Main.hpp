@@ -1,16 +1,22 @@
 /*
  * Main.hpp
  *
- *  Created on: 2017Äê8ÔÂ18ÈÕ
+ *  Created on: 2017ï¿½ï¿½8ï¿½ï¿½18ï¿½ï¿½
  *      Author: cguo005
  */
+#include <string>
 
 #pragma once
+
+
+using UINT64 = unsigned long long;
 
 class Main
 {
 public:
-    int getInt();
+    std::string getInt(int power);
+private:
+    std::string cal(int powerNumber);
 };
 
 
