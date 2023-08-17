@@ -5,7 +5,7 @@
  *      Author: cguo005
  */
 #pragma once
-enum class StateId;
+enum class StateId : int;
 
 namespace fn
 {

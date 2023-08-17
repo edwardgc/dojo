@@ -1,7 +1,6 @@
-#include <Main.hpp>
-#include <iostream>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
+#include <Main.hpp>
 
 using namespace std;
 using namespace testing;
@@ -18,5 +17,6 @@ TEST_F(MainTest, test)
 {
     ASSERT_EQ(1, 1);
 }
+
 
 } //namespace fn

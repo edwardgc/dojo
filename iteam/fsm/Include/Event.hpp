@@ -11,7 +11,7 @@
 namespace fn
 {
 
-enum class EVENT
+enum class Event
 {
     SWITCH
 };
